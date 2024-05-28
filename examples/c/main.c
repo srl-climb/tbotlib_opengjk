@@ -39,7 +39,7 @@ readinput(const char* inputfile, gkFloat*** pts, int* out) {
 
   /* Open file. */
 #ifdef WIN32
-  errno_t err;
+  int err;
   if ((err = fopen_s(&fp, inputfile, "r")) != 0) {
 #else
   if ((fp = fopen(inputfile, "r")) == NULL) {
